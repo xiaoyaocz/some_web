@@ -9,16 +9,14 @@
 
 <body>
     <div id="captcha">
-
+        <p>验证码加载中</p>
     </div>
 </body>
 <script type="text/javascript" src="js/gt.js"></script>
 <script>
 
     window.onload = function () {
-        if(!getQueryVariable("gt")){
-            return;
-        }
+      
         let appType=getQueryVariable("app");
         initGeetest({
             gt: getQueryVariable("gee_gt"),
