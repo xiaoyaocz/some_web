@@ -31,7 +31,7 @@
             captchaObj.appendTo('#captcha');
             captchaObj.onSuccess(function () {
                 var result = captchaObj.getValidate();
-                window.location.href=`http://geetest.result/?success=1&geetest_challenge=${result.geetest_challenge}&geetest_validate=${result.geetest_validate}&geetest_seccode=${result.geetest_seccode}&app=uwp`
+                window.location.href=`http://geetest.result/?success=1&recaptcha_token=${getQueryVariable("recaptcha_token")}&geetest_challenge=${result.geetest_challenge}&geetest_validate=${result.geetest_validate}&geetest_seccode=${result.geetest_seccode}&app=uwp`
                 console.log({
                     geetest_challenge: result.geetest_challenge,
                     geetest_validate: result.geetest_validate,
